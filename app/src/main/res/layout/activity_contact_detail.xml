@@ -6,40 +6,50 @@
     android:layout_height="match_parent"
     tools:context=".ContactDetail">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_tools"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:title="@string/app_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <ImageView
         android:id="@+id/image_contact_detail"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_marginTop="40dp"
+        android:contentDescription="avatar content description"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.164"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:src="@tools:sample/avatars"
-        android:contentDescription="avatar content description" />
+        app:layout_constraintTop_toBottomOf="@id/toolbar_tools"
+        tools:src="@tools:sample/avatars" />
 
     <TextView
         android:id="@+id/text_contact_detail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="52dp"
+        android:text="Ricardo"
+        android:textSize="28sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.168"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/image_contact_detail"
-        tools:text="Ricardo"
-        android:textSize="28sp"/>
+        app:layout_constraintTop_toBottomOf="@id/image_contact_detail" />
 
     <TextView
         android:id="@+id/phone_contact_detail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
+        android:text="(19) 0000-0000"
+        android:textSize="22sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.149"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/text_contact_detail"
-        tools:text="(19) 0000-0000"
-        android:textSize="22sp"/>
+        app:layout_constraintTop_toBottomOf="@id/text_contact_detail" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
